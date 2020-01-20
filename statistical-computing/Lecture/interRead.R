@@ -1,0 +1,11 @@
+inter = read.table("http://users.stat.ufl.edu/~winner/data/interfaith.dat")
+colnames(inter) = c("ses","religion","gender","interfaith","count")
+inter$ses = factor(inter$ses)
+levels(inter$ses) =  c("low","middle", "high")
+inter$religion = factor(inter$religion)
+levels(inter$religion) = c("protestant", "catholic")
+inter$gender = factor(inter$gender)
+levels(inter$gender) = c("male","female")
+inter$interfaith = factor(inter$interfaith)
+levels(inter$interfaith) = c("yes", "no")
+inter 
